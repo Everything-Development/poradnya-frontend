@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600&family=Montserrat+Alternates:wght@400;500;600&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600;1,700&family=Righteous&family=Roboto:wght@300&display=swap');
+
+$primary-color: #E6B751;
+$secondary-color: #F4E2B9;
+$selection-color: #fff8e9;
+$dark-color: #2c2727;
+$grey-color: #727272;
+
+@mixin centered-text(){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin centered-verticaly(){
+    display: flex;
+    align-items: center;
+}
+
+@mixin admin-font() {
+    font-family: "Nunito" !important;
+    font-weight: 500 !important;
+}
+
+.admin-body{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+
+    .admin-menu{
+        width: 20%;
+        box-shadow: 4px 0px 10px rgba(216, 216, 216, 0.25);
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        .admin-header-logo{
+            height: 70px;
+            color: $primary-color;
+            @include centered-verticaly();
+            a{
+                text-decoration: none;
+                width: 100%;
+                font-family: "Nunito" !important;
+                text-align: center;
+                color: $primary-color;
+
+            }
+            h3{
+                width: 100%;
+                font-family: "Nunito" !important;
+                text-align: center;
+            }
+        }
+        .admin-menu-navs{
+            margin-left:20px;
+            height: calc(100vh - 140px);
+            p{
+                @include admin-font;
+                color: $dark-color;
+                height: 20px;
+                margin-top:20px;
+                margin-bottom:5px;
+                margin-left:10px;
+            }
+            ul{
+                margin-left: 20px;
+                a{
+                    text-decoration: none;
+                }
+                li{
+                    @include admin-font;
+                    height: 35px;
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    color: $grey-color;
+                    transition: .2s;
+                    padding-left:7px;
+                    margin-right: 10px;
+                    &:hover{
+                        cursor: pointer;
+                        background-color: rgb(246, 246, 246);
+                        border-radius: 10px;
+                    }
+                    &:active{
+                        background-color: $secondary-color;
+                    }
+                }
+            }   
+        }
+        .admin-evdev{
+            height: 50px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            p{
+                @include admin-font;
+            }
+            img{
+                height: 20px;
+            }
+        }
+    }
+    .admin-main-layout{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        .admin-main-header{
+            height: 70px;
+            width: 100%;;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            p{
+                @include admin-font;
+                margin-left:50px;
+                margin-right: 20px;
+                color: $grey-color;
+            }
+            .admin-main-page-title{
+                font-size: 18px;
+            }
+            .admin-header-right-group{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;    
+                .admin-logged-user{
+                    max-width: 200px;
+                }
+            }
+        }
+        .admin-datatable{
+            height: calc(100vh - 70px);
+            overflow-y: scroll;
+            width: 95%;
+            margin-left:2.5%;
+            margin-right: 2.5%;
+            @include admin-font;
+            font-family: "Nunito";
+            div{
+                @include admin-font;
+            }
+
+        }
+    }
+}
+
+
+
+.id-column {
+    outline: none !important;
+    &:active{
+        outline: none !important;
+    }
+    &:hover{
+        outline: none !important;
+    }
+    &:focus{
+        outline: none !important;
+    }
+}
+
+.MuiDataGrid-row.Mui-selected{
+    background-color: $selection-color !important;
+}
+
+.Mui-checked{
+    color: $primary-color !important;
+}
+.MuiDataGrid-cellCheckbox{
+    &:focus{
+        outline: none !important;
+    }
+    &:active{
+        outline: none !important;
+    }
+}
+
+.admin-controls{
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+    
+    width: 95%;
+    margin-left: 2.5%;
+    div{
+        border-radius: 15px;
+        height: 40px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom:10px;
+    }
+    .admin-delete-selected{
+        // border: 1px solid red;
+       color: crimson;
+       background-color: rgba(255, 0, 0, 0.1);
+       @include centered-text;
+    //    color: white; 
+       cursor: pointer;
+    }
+    .admin-create-new{
+        color: green;
+        background-color: rgba(0, 255, 0, 0.15);
+        @include centered-text;
+        cursor: pointer;
+     }
+     p{
+         @include admin-font;
+     }
+}
+
+
+.admin-table-image{
+    object-fit: cover;
+    height: 50px;
+    border-radius: 50px;
+    width: 50px;
+}
+
+@keyframes loading_rounding {
+    0%{
+        transform: rotatey(0deg);
+;
+
+    }
+    100%{
+        transform: rotatey(360deg);
+
+    }
+}
+
+.loading-screen{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+    p{
+        color: $grey-color;
+    }
+    img{
+        height: 40px;
+        margin-bottom: 10px;
+        animation: linear 3s infinite loading_rounding;
+    }
+}

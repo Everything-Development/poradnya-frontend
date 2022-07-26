@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik";
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.hero-centers {
+    width: 100vw;
+    position: relative;
+}
+
+
+
+.hero-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero-centers::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(43, 43, 43, 0.7);
+}
+@media (max-width: 600px){
+    .hero-centers{
+        height: 200px;
+    }
+    .hero-image {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.container {
+    padding: 3% 5%;
+    color: #2c2727;
+}
+
+.centers-title {
+    font-size: 3rem;
+    line-height: 4rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.centers-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 2rem;
+}
+
+.card-center {
+    background: #FFFFFF;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(129, 129, 129, 0.08);
+    margin-left:20px;
+    margin-right: 20px;
+}
+
+.card-image {
+    display: block;
+    max-width: 100%;
+}
+
+.card-content {
+    padding: 1rem 1.2rem 1.75rem 1rem;
+}
+.card-title{
+   display: flex; 
+}
+.card-title p {
+    overflow: hidden;
+    width:325px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+
+.card-title a {
+    display: flex;
+}
+
+.card-adress {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    color: #818181;
+    margin-bottom: 1rem;
+}
+
+.card-phone,
+.card-email {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-phone__number,
+.card-email__adress {
+    text-decoration: none;
+    color: #2c2727;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+}
+
+.services {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.services-item {
+    background: #F4E2B9;
+    border-radius: 48px;
+    padding: 6px 8px;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+}
+
+
+@media (max-width: 1280px) {
+    .centers-title {
+        text-align: center;
+    }
+
+    .centers-cards {
+        justify-content: center;
+        column-gap: 5%;
+    }
+}
+
+@media (max-width: 445px) {
+    .centers-title {
+        font-size: 2rem;
+        line-height: 3rem;
+        margin-bottom: 2rem;
+    }
+}

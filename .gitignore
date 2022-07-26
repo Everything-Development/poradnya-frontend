@@ -1,0 +1,4 @@
+venv/
+poradnya/node_modules
+front/build
+front/src/firebase
