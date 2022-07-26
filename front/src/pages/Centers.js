@@ -39,7 +39,7 @@ const CentersPage = () => {
         const fetch_centers = async () => {
             let response = {}
             if (problem === null && region === null){
-                response = await fetch('http://poradnya-web.herokuapp.com/api/get_all_consulting_centers/', {
+                response = await fetch('https://poradnya-web.herokuapp.com/api/get_all_consulting_centers/', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',

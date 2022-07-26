@@ -209,25 +209,28 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+CORS_ORIGIN_ALLOW_ALL = True   
 
-CORS_ALLOWED_ORIGINS = [
-    'https://poradnya-web.herokuapp.com',
-    'http://127.0.0.1:8000',
-    'http://localhost:3000',
-    'http://localhost:8000',
-    'http://192.168.1.2:3000',
-    'http://192.168.1.2:8000',
-    'http://192.168.100.153:3000',
-    'https://helpers-ua.herokuapp.com',
-    'http://poradnya.evdev.dev',
-    'https://poradnya.evdev.dev',
-    'http://evdev.dev',
-    'https://evdev.dev'
-    'https://poradnya-55d71.web.app',
-    'http://poradnya-55d71.web.app',
-    'https://poradnya.org.ua',
-    'http://poradnya.org.ua',
-]
+# CORS_ALLOWED_ORIGINS = [
+#     'https://poradnya-web.herokuapp.com',
+#     'http://127.0.0.1:8000',
+#     'http://localhost:3000',
+#     'http://localhost:8000',
+#     'http://192.168.1.2:3000',
+#     'http://192.168.1.2:8000',
+#     'http://192.168.100.153:3000',
+#     'https://helpers-ua.herokuapp.com',
+#     'http://poradnya.evdev.dev',
+#     'https://poradnya.evdev.dev',
+#     'http://evdev.dev',
+#     'https://evdev.dev'
+#     'https://poradnya-55d71.web.app',
+#     'http://poradnya-55d71.web.app',
+#     'https://poradnya.org.ua',
+#     'http://poradnya.org.ua',
+#     'https://poradnya-firebase.evdev.dev',
+#     'http://poradnya-firebase.evdev.dev'
+# ]
 
 
 # AUTH_USER_MODEL = "api.Accounts"
