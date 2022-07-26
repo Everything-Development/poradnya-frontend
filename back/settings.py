@@ -223,7 +223,10 @@ CORS_ALLOWED_ORIGINS = [
     'https://poradnya.evdev.dev',
     'http://evdev.dev',
     'https://evdev.dev'
-
+    'https://poradnya-55d71.web.app',
+    'http://poradnya-55d71.web.app',
+    'https://poradnya.org.ua',
+    'http://poradnya.org.ua',
 ]
 
 
