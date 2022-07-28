@@ -2,6 +2,8 @@ import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import '../../pages/admin/admin.scss'
 import example from '../../assets/background_landing.png'
+
+
 export default function DataTable(props) {
   return (
       <>

@@ -16,11 +16,11 @@ import ConsultForm from './pages/ConsultForm'
 import AdminPage from './pages/admin/AdminPage' 
 import AdminListDataPage from './pages/admin/AdminListDataPage'
 // import AdminBlogPage from './pages/admin/AdminBlogPage'
-import AdminTagsPage from './pages/admin/AdminTagsPage'
 
 
 import { useNavigate, useLocation, Link } from 'react-router-dom'
 import EditEntityTemplate from "./components/admin/EditEntityTemplate";
+import AdminEditEntity from "./pages/admin/AdminEditEntity";
 
 
 
@@ -43,7 +43,7 @@ function App() {
               <Route path="admin">
                 <Route index element={<AdminPage/>}/>
                 <Route path=":admin_page" element={<AdminListDataPage/>}/>
-                <Route path=':admin_page/:id' element={<EditEntityTemplate/>}/>
+                <Route path=':admin_page/:id' element={<AdminEditEntity/>}/>
               </Route>
             </Route>
           </Routes>

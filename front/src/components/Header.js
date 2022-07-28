@@ -80,7 +80,7 @@ export const Header = () => {
     setDrawerOpen(!drawerOpen)
   }
 
-  let admin_header = ['/admin', '/admin/', '/admin/centers', '/admin/blog', '/admin/tags', '/admin/edit-entity']
+  let admin_header = ['/', '/aboutus', '/article', '/centers', '/blog', '/contacts', '/consult_form']
 
       const HeaderHTML = () => {
         return (
@@ -143,7 +143,7 @@ export const Header = () => {
       }
   return (
     <>
-    {!admin_header.includes(location.pathname) &&
+    {admin_header.includes(location.pathname) &&
       <HeaderHTML/> 
     }
     </>
